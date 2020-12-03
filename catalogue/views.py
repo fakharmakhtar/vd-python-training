@@ -62,7 +62,7 @@ def product_create_view(request):
 def product_delete_view(request, product_id):
     product = Product.objects.get(id=product_id)
     product.delete()
-    return JsonResponse(data=None, status=204)
+    return HttpResponse('Product deleted successfully')
 
 
 def product_update_view(request, product_id):
