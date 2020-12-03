@@ -8,9 +8,6 @@ class ProductAdmin(admin.ModelAdmin):
     search_fields = ('name',)
     list_filter = ('category__name',)
 
-    def display_price(self, obj):
-        return f'PKR {obj.price}'
-
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
